@@ -11,14 +11,18 @@ namespace {
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
  *
  * The app registration should:
- * - Be only for personal accounts.
+ * - Be only for personal accounts. 
+ *   - You might need to manually change this in the Manifest tab by changing 
+ *   - "signInAudience" to "PersonalMicrosoftAccount"
+ *   - "accessTokenAcceptedVersion" to 2 if it isn't set
  * - Not have any redirect URI.
  * - Not have any platform.
  * - Have no credentials.
  * - No certificates.
  * - No client secrets.
- * - Enable 'Live SDK support' for access to XBox APIs.
- * - Enable 'public client flows' for OAuth2 device flow.
+ * - Enable 'Live SDK support' for access to XBox APIs. (Under Authentication) 
+ *   - Note that this isn't visible if the registration isn't set to Personal Accounts
+ * - Enable 'public client flows' for OAuth2 device flow. (Under Authentication)
  *
  * By putting one in here, you accept the terms and conditions for using the MS Identity Plaform and assume all responsibilities associated with it.
  * See: https://docs.microsoft.com/en-us/legal/microsoft-identity-platform/terms-of-use
